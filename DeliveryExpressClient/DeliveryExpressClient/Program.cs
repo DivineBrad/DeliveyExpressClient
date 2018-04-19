@@ -16,7 +16,7 @@ namespace DeliveryExpressClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmContainer());
+            Application.Run(new LoginForm());
         }
     }
 }

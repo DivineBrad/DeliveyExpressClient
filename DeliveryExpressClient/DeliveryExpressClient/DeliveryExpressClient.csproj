@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,16 +47,87 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\DeliveryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="EmlpoyeeContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmlpoyeeContainer.Designer.cs">
+      <DependentUpon>EmlpoyeeContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertItem.Designer.cs">
+      <DependentUpon>insertItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmContainer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmContainer.Designer.cs">
       <DependentUpon>FrmContainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="insertOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertOrderForm.Designer.cs">
+      <DependentUpon>insertOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchOrderForm.Designer.cs">
+      <DependentUpon>searchOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateItem.Designer.cs">
+      <DependentUpon>updateItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateItemValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateItemValues.Designer.cs">
+      <DependentUpon>UpdateItemValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateOrderForm.Designer.cs">
+      <DependentUpon>updateOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewItems.Designer.cs">
+      <DependentUpon>viewItems.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EmlpoyeeContainer.resx">
+      <DependentUpon>EmlpoyeeContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertItem.resx">
+      <DependentUpon>insertItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmContainer.resx">
       <DependentUpon>FrmContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertOrderForm.resx">
+      <DependentUpon>insertOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +138,31 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="updateItem.resx">
+      <DependentUpon>updateItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateItemValues.resx">
+      <DependentUpon>UpdateItemValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewItems.resx">
+      <DependentUpon>viewItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\DeliveryService\DeliveryExpressClient.DeliveryService.Item.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DeliveryService\DeliveryExpressClient.DeliveryService.UserType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DeliveryService\DeliveryService.wsdl" />
+    <None Include="Connected Services\DeliveryService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DeliveryService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DeliveryService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -77,6 +175,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\DeliveryService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DeliveryService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DeliveryService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DeliveryService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DeliveryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
