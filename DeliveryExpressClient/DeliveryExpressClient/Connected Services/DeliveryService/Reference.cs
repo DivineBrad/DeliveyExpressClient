@@ -261,6 +261,83 @@ namespace DeliveryExpressClient.DeliveryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+    [System.SerializableAttribute()]
+    public partial class Fault1 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Error_detailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Error_reasonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int codeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Error_detail {
+            get {
+                return this.Error_detailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Error_detailField, value) != true)) {
+                    this.Error_detailField = value;
+                    this.RaisePropertyChanged("Error_detail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Error_reason {
+            get {
+                return this.Error_reasonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Error_reasonField, value) != true)) {
+                    this.Error_reasonField = value;
+                    this.RaisePropertyChanged("Error_reason");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int code {
+            get {
+                return this.codeField;
+            }
+            set {
+                if ((this.codeField.Equals(value) != true)) {
+                    this.codeField = value;
+                    this.RaisePropertyChanged("code");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="UserType", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
     [System.SerializableAttribute()]
     public partial class UserType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -320,6 +397,753 @@ namespace DeliveryExpressClient.DeliveryService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Order", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+    [System.SerializableAttribute()]
+    public partial class Order : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DeliveryExpressClient.DeliveryService.Customer CustomerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OrderIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DeliveryExpressClient.DeliveryService.OrderItem[] OrderItemsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrderNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DeliveryExpressClient.DeliveryService.OrderStatus StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SubtotalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal TaxField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal TotalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DeliveryExpressClient.DeliveryService.User UserField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DeliveryExpressClient.DeliveryService.Customer Customer {
+            get {
+                return this.CustomerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerField, value) != true)) {
+                    this.CustomerField = value;
+                    this.RaisePropertyChanged("Customer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateTime {
+            get {
+                return this.DateTimeField;
+            }
+            set {
+                if ((this.DateTimeField.Equals(value) != true)) {
+                    this.DateTimeField = value;
+                    this.RaisePropertyChanged("DateTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OrderId {
+            get {
+                return this.OrderIdField;
+            }
+            set {
+                if ((this.OrderIdField.Equals(value) != true)) {
+                    this.OrderIdField = value;
+                    this.RaisePropertyChanged("OrderId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DeliveryExpressClient.DeliveryService.OrderItem[] OrderItems {
+            get {
+                return this.OrderItemsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrderItemsField, value) != true)) {
+                    this.OrderItemsField = value;
+                    this.RaisePropertyChanged("OrderItems");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OrderNo {
+            get {
+                return this.OrderNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrderNoField, value) != true)) {
+                    this.OrderNoField = value;
+                    this.RaisePropertyChanged("OrderNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DeliveryExpressClient.DeliveryService.OrderStatus Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Subtotal {
+            get {
+                return this.SubtotalField;
+            }
+            set {
+                if ((this.SubtotalField.Equals(value) != true)) {
+                    this.SubtotalField = value;
+                    this.RaisePropertyChanged("Subtotal");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Tax {
+            get {
+                return this.TaxField;
+            }
+            set {
+                if ((this.TaxField.Equals(value) != true)) {
+                    this.TaxField = value;
+                    this.RaisePropertyChanged("Tax");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Total {
+            get {
+                return this.TotalField;
+            }
+            set {
+                if ((this.TotalField.Equals(value) != true)) {
+                    this.TotalField = value;
+                    this.RaisePropertyChanged("Total");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DeliveryExpressClient.DeliveryService.User User {
+            get {
+                return this.UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserField, value) != true)) {
+                    this.UserField = value;
+                    this.RaisePropertyChanged("User");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+    [System.SerializableAttribute()]
+    public partial class Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DeliveryExpressClient.DeliveryService.Address AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CustomerIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DeliveryExpressClient.DeliveryService.Address Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CustomerId {
+            get {
+                return this.CustomerIdField;
+            }
+            set {
+                if ((this.CustomerIdField.Equals(value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderStatus", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+    [System.SerializableAttribute()]
+    public partial class OrderStatus : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StatusIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Code {
+            get {
+                return this.CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
+                    this.CodeField = value;
+                    this.RaisePropertyChanged("Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Desc {
+            get {
+                return this.DescField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescField, value) != true)) {
+                    this.DescField = value;
+                    this.RaisePropertyChanged("Desc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StatusId {
+            get {
+                return this.StatusIdField;
+            }
+            set {
+                if ((this.StatusIdField.Equals(value) != true)) {
+                    this.StatusIdField = value;
+                    this.RaisePropertyChanged("StatusId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+    [System.SerializableAttribute()]
+    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DeliveryExpressClient.DeliveryService.Log[] LogsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PassField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DeliveryExpressClient.DeliveryService.UserType TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UserIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DeliveryExpressClient.DeliveryService.Log[] Logs {
+            get {
+                return this.LogsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LogsField, value) != true)) {
+                    this.LogsField = value;
+                    this.RaisePropertyChanged("Logs");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Pass {
+            get {
+                return this.PassField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PassField, value) != true)) {
+                    this.PassField = value;
+                    this.RaisePropertyChanged("Pass");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DeliveryExpressClient.DeliveryService.UserType Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserId {
+            get {
+                return this.UserIdField;
+            }
+            set {
+                if ((this.UserIdField.Equals(value) != true)) {
+                    this.UserIdField = value;
+                    this.RaisePropertyChanged("UserId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderItem", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+    [System.SerializableAttribute()]
+    public partial class OrderItem : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DetailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ItemIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OrderIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QuantityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Detail {
+            get {
+                return this.DetailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DetailField, value) != true)) {
+                    this.DetailField = value;
+                    this.RaisePropertyChanged("Detail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ItemId {
+            get {
+                return this.ItemIdField;
+            }
+            set {
+                if ((this.ItemIdField.Equals(value) != true)) {
+                    this.ItemIdField = value;
+                    this.RaisePropertyChanged("ItemId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OrderId {
+            get {
+                return this.OrderIdField;
+            }
+            set {
+                if ((this.OrderIdField.Equals(value) != true)) {
+                    this.OrderIdField = value;
+                    this.RaisePropertyChanged("OrderId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuantityField, value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+    [System.SerializableAttribute()]
+    public partial class Address : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AddressIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RegionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StreetField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AddressId {
+            get {
+                return this.AddressIdField;
+            }
+            set {
+                if ((this.AddressIdField.Equals(value) != true)) {
+                    this.AddressIdField = value;
+                    this.RaisePropertyChanged("AddressId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Code {
+            get {
+                return this.CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
+                    this.CodeField = value;
+                    this.RaisePropertyChanged("Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Region {
+            get {
+                return this.RegionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RegionField, value) != true)) {
+                    this.RegionField = value;
+                    this.RaisePropertyChanged("Region");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Street {
+            get {
+                return this.StreetField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StreetField, value) != true)) {
+                    this.StreetField = value;
+                    this.RaisePropertyChanged("Street");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Log", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+    [System.SerializableAttribute()]
+    public partial class Log : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ActionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LogIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Action {
+            get {
+                return this.ActionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ActionField, value) != true)) {
+                    this.ActionField = value;
+                    this.RaisePropertyChanged("Action");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateTime {
+            get {
+                return this.DateTimeField;
+            }
+            set {
+                if ((this.DateTimeField.Equals(value) != true)) {
+                    this.DateTimeField = value;
+                    this.RaisePropertyChanged("DateTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LogId {
+            get {
+                return this.LogIdField;
+            }
+            set {
+                if ((this.LogIdField.Equals(value) != true)) {
+                    this.LogIdField = value;
+                    this.RaisePropertyChanged("LogId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DeliveryService.IDeliveryService")]
     public interface IDeliveryService {
@@ -332,52 +1156,88 @@ namespace DeliveryExpressClient.DeliveryService {
         System.Threading.Tasks.Task<int> DeleteOrderAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/UpdateItem", ReplyAction="http://tempuri.org/IDeliveryService/UpdateItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/UpdateItemFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
         int UpdateItem(DeliveryExpressClient.DeliveryService.Item i);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/UpdateItem", ReplyAction="http://tempuri.org/IDeliveryService/UpdateItemResponse")]
         System.Threading.Tasks.Task<int> UpdateItemAsync(DeliveryExpressClient.DeliveryService.Item i);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/CreateItem", ReplyAction="http://tempuri.org/IDeliveryService/CreateItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/CreateItemFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
         int CreateItem(DeliveryExpressClient.DeliveryService.Item i);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/CreateItem", ReplyAction="http://tempuri.org/IDeliveryService/CreateItemResponse")]
         System.Threading.Tasks.Task<int> CreateItemAsync(DeliveryExpressClient.DeliveryService.Item i);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/GetItems", ReplyAction="http://tempuri.org/IDeliveryService/GetItemsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/GetItemsFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
         DeliveryExpressClient.DeliveryService.Item[] GetItems();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/GetItems", ReplyAction="http://tempuri.org/IDeliveryService/GetItemsResponse")]
         System.Threading.Tasks.Task<DeliveryExpressClient.DeliveryService.Item[]> GetItemsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/GetItem", ReplyAction="http://tempuri.org/IDeliveryService/GetItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/GetItemFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
         DeliveryExpressClient.DeliveryService.Item GetItem(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/GetItem", ReplyAction="http://tempuri.org/IDeliveryService/GetItemResponse")]
         System.Threading.Tasks.Task<DeliveryExpressClient.DeliveryService.Item> GetItemAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/DeleteItem", ReplyAction="http://tempuri.org/IDeliveryService/DeleteItemResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/DeleteItemFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
         int DeleteItem(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/DeleteItem", ReplyAction="http://tempuri.org/IDeliveryService/DeleteItemResponse")]
         System.Threading.Tasks.Task<int> DeleteItemAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/GetItemsByName", ReplyAction="http://tempuri.org/IDeliveryService/GetItemsByNameResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/GetItemsByNameFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
         DeliveryExpressClient.DeliveryService.Item[] GetItemsByName(string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/GetItemsByName", ReplyAction="http://tempuri.org/IDeliveryService/GetItemsByNameResponse")]
         System.Threading.Tasks.Task<DeliveryExpressClient.DeliveryService.Item[]> GetItemsByNameAsync(string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/Authenticate", ReplyAction="http://tempuri.org/IDeliveryService/AuthenticateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/AuthenticateFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
         bool Authenticate(string username, string password, int typeid);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/Authenticate", ReplyAction="http://tempuri.org/IDeliveryService/AuthenticateResponse")]
         System.Threading.Tasks.Task<bool> AuthenticateAsync(string username, string password, int typeid);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/getTypes", ReplyAction="http://tempuri.org/IDeliveryService/getTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/getTypesFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
         DeliveryExpressClient.DeliveryService.UserType[] getTypes();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/getTypes", ReplyAction="http://tempuri.org/IDeliveryService/getTypesResponse")]
         System.Threading.Tasks.Task<DeliveryExpressClient.DeliveryService.UserType[]> getTypesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/GetOrders", ReplyAction="http://tempuri.org/IDeliveryService/GetOrdersResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/GetOrdersFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+        DeliveryExpressClient.DeliveryService.Order[] GetOrders();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/GetOrders", ReplyAction="http://tempuri.org/IDeliveryService/GetOrdersResponse")]
+        System.Threading.Tasks.Task<DeliveryExpressClient.DeliveryService.Order[]> GetOrdersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/CreateOrder", ReplyAction="http://tempuri.org/IDeliveryService/CreateOrderResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/CreateOrderFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+        int CreateOrder(DeliveryExpressClient.DeliveryService.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/CreateOrder", ReplyAction="http://tempuri.org/IDeliveryService/CreateOrderResponse")]
+        System.Threading.Tasks.Task<int> CreateOrderAsync(DeliveryExpressClient.DeliveryService.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/CreateCustomer", ReplyAction="http://tempuri.org/IDeliveryService/CreateCustomerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/CreateCustomerFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+        int CreateCustomer(DeliveryExpressClient.DeliveryService.Customer cu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/CreateCustomer", ReplyAction="http://tempuri.org/IDeliveryService/CreateCustomerResponse")]
+        System.Threading.Tasks.Task<int> CreateCustomerAsync(DeliveryExpressClient.DeliveryService.Customer cu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/UpdateCustomer", ReplyAction="http://tempuri.org/IDeliveryService/UpdateCustomerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DeliveryExpressClient.DeliveryService.Fault1), Action="http://tempuri.org/IDeliveryService/UpdateCustomerFaultFault", Name="Fault", Namespace="http://schemas.datacontract.org/2004/07/DeliveryExpress.Model")]
+        int UpdateCustomer(DeliveryExpressClient.DeliveryService.Customer cu);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeliveryService/UpdateCustomer", ReplyAction="http://tempuri.org/IDeliveryService/UpdateCustomerResponse")]
+        System.Threading.Tasks.Task<int> UpdateCustomerAsync(DeliveryExpressClient.DeliveryService.Customer cu);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -477,6 +1337,38 @@ namespace DeliveryExpressClient.DeliveryService {
         
         public System.Threading.Tasks.Task<DeliveryExpressClient.DeliveryService.UserType[]> getTypesAsync() {
             return base.Channel.getTypesAsync();
+        }
+        
+        public DeliveryExpressClient.DeliveryService.Order[] GetOrders() {
+            return base.Channel.GetOrders();
+        }
+        
+        public System.Threading.Tasks.Task<DeliveryExpressClient.DeliveryService.Order[]> GetOrdersAsync() {
+            return base.Channel.GetOrdersAsync();
+        }
+        
+        public int CreateOrder(DeliveryExpressClient.DeliveryService.Order order) {
+            return base.Channel.CreateOrder(order);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateOrderAsync(DeliveryExpressClient.DeliveryService.Order order) {
+            return base.Channel.CreateOrderAsync(order);
+        }
+        
+        public int CreateCustomer(DeliveryExpressClient.DeliveryService.Customer cu) {
+            return base.Channel.CreateCustomer(cu);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateCustomerAsync(DeliveryExpressClient.DeliveryService.Customer cu) {
+            return base.Channel.CreateCustomerAsync(cu);
+        }
+        
+        public int UpdateCustomer(DeliveryExpressClient.DeliveryService.Customer cu) {
+            return base.Channel.UpdateCustomer(cu);
+        }
+        
+        public System.Threading.Tasks.Task<int> UpdateCustomerAsync(DeliveryExpressClient.DeliveryService.Customer cu) {
+            return base.Channel.UpdateCustomerAsync(cu);
         }
     }
 }

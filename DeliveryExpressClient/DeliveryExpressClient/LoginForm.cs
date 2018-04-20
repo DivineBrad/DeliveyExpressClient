@@ -43,10 +43,15 @@ namespace DeliveryExpressClient
                     bool status = client.Authenticate(name, pass, Convert.ToInt32(key));
                     if (status)
                     {
-                        EmlpoyeeContainer econtainer = new EmlpoyeeContainer();
+                       /* EmlpoyeeContainer econtainer = new EmlpoyeeContainer();
                         econtainer.Show();
+                        */
                         lblMessage.Text = "";
-
+                        FrmContainer parent = (FrmContainer)this.MdiParent;
+                        parent.User = "employee";
+                        parent.MainMenuStrip.Visible = true;
+                        this.Close();
+                        
                     }
                     else
                     {
@@ -60,9 +65,16 @@ namespace DeliveryExpressClient
                     bool status = client.Authenticate(name, pass, Convert.ToInt32(key));
                     if (status)
                     {
-                        FrmContainer frmContainer = new FrmContainer();
-                        frmContainer.Show();
+                        /* FrmContainer frmContainer = new FrmContainer();
+
+                     frmContainer.Show();
+                      */
                         lblMessage.Text = "";
+                        FrmContainer parent = (FrmContainer)this.MdiParent;
+                        parent.User = "manager";
+                        parent.MainMenuStrip.Visible = true;
+                        this.Close();
+                      
                     }
                     else
                     {
@@ -104,6 +116,11 @@ namespace DeliveryExpressClient
                 error += "Enter pass!! \n";
             }
             return error;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

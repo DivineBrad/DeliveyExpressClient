@@ -19,7 +19,11 @@ namespace DeliveryExpressClient
 
         private void EmlpoyeeContainer_Load(object sender, EventArgs e)
         {
-
+            FrmViewOrders frmOrders = new FrmViewOrders();
+            // Set the Parent Form of the Child window.  
+            frmOrders.MdiParent = this;
+            // Display the new form.  
+            frmOrders.Show();
         }
 
         private void menu_Clicked(object sender, EventArgs e)

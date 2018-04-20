@@ -58,6 +58,12 @@
     <Compile Include="EmlpoyeeContainer.Designer.cs">
       <DependentUpon>EmlpoyeeContainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmViewOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewOrders.Designer.cs">
+      <DependentUpon>FrmViewOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="insertItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
       <DependentUpon>viewItems.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Connected Services\DeliveryService\DeliveryExpressClient.DeliveryService.Item.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DeliveryService\DeliveryExpressClient.DeliveryService.Order.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\DeliveryService\DeliveryExpressClient.DeliveryService.UserType.datasource">

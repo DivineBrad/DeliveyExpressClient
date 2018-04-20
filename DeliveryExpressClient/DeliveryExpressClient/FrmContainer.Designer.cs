@@ -78,6 +78,8 @@
             this.MainMenuStrip = this.fileMenuStrip;
             this.Name = "FrmContainer";
             this.Text = "DeliveryExpress";
+            this.Load += new System.EventHandler(this.FrmContainer_Load);
+            this.MdiChildActivate += new System.EventHandler(this.FrmContainer_MdiChildActivate);
             this.fileMenuStrip.ResumeLayout(false);
             this.fileMenuStrip.PerformLayout();
             this.ResumeLayout(false);
