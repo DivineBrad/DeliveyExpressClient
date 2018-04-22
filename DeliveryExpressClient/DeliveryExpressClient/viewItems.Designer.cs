@@ -64,12 +64,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 517);
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.search);
             this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.itemsGridView);
             this.Name = "viewItems";
             this.Text = "VIEW ITEMS";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.viewItems_Load);
             ((System.ComponentModel.ISupportInitialize)(this.itemsGridView)).EndInit();
             this.ResumeLayout(false);

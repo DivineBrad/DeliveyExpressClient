@@ -71,15 +71,7 @@ namespace DeliveryExpressClient
         private void FrmContainer_MdiChildActivate(object sender, EventArgs e)
         {
             
-            if (this.User.Equals("employee"))
-            {
-               var viStrip =  fileMenuStrip.Items.Find("ViewItemsStrip", true).First();
-                //viStrip.Visible = false;
-                var upStrip = fileMenuStrip.Items.Find("UpdateItemStrip", true).First();
-               // upStrip.Visible = false;
-                var newStrip = fileMenuStrip.Items.Find("NewItemStrip", true).First();
-               // newStrip.Visible = false;
-            }
+            
         }
 
         /* private void toolStripMenuItem1_Click(object sender, EventArgs e)

@@ -43,13 +43,21 @@ namespace DeliveryExpressClient
                     bool status = client.Authenticate(name, pass, Convert.ToInt32(key));
                     if (status)
                     {
-                       /* EmlpoyeeContainer econtainer = new EmlpoyeeContainer();
-                        econtainer.Show();
-                        */
+                     
+                        
                         lblMessage.Text = "";
                         FrmContainer parent = (FrmContainer)this.MdiParent;
                         parent.User = "employee";
                         parent.MainMenuStrip.Visible = true;
+                        var viStrip = parent.MainMenuStrip.Items.Find("ViewItemsStrip", true).First();
+                        viStrip.Visible = false;
+                        var upStrip = parent.MainMenuStrip.Items.Find("UpdateItemStrip", true).First();
+                        upStrip.Visible = false;
+                        var newStrip = parent.MainMenuStrip.Items.Find("NewItemStrip", true).First();
+                        newStrip.Visible = false;
+                        FrmViewOrders frmOrders = new FrmViewOrders();
+                        frmOrders.MdiParent = this.MdiParent;
+                        frmOrders.Show();
                         this.Close();
                         
                     }
@@ -65,10 +73,10 @@ namespace DeliveryExpressClient
                     bool status = client.Authenticate(name, pass, Convert.ToInt32(key));
                     if (status)
                     {
-                        /* FrmContainer frmContainer = new FrmContainer();
-
-                     frmContainer.Show();
-                      */
+                        viewItems vItems = new viewItems();
+                        vItems.MdiParent = this.MdiParent;
+                        vItems.Show();
+                      
                         lblMessage.Text = "";
                         FrmContainer parent = (FrmContainer)this.MdiParent;
                         parent.User = "manager";

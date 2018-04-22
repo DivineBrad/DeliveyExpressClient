@@ -28,11 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.dgvOrders = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvOrders
+            // 
+            this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrders.Location = new System.Drawing.Point(-4, 123);
+            this.dgvOrders.Name = "dgvOrders";
+            this.dgvOrders.Size = new System.Drawing.Size(580, 400);
+            this.dgvOrders.TabIndex = 0;
+            // 
+            // FrmViewOrders
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.dgvOrders);
+            this.Name = "FrmViewOrders";
             this.Text = "FrmViewOrders";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmViewOrders_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvOrders;
     }
 }
